@@ -1,11 +1,13 @@
 <?php 
+
 class Pokemon{
 	
-	public $name;
+	public $naam;
+	public $bijnaam;
 	public $type;
 	public $hp;
 
-	public function __construct($name, $type, $hp)
+	public function __construct($naam, $type, $hp)
 	{
 		$this->naam = $naam;
 		$this->type = $type;
@@ -36,6 +38,7 @@ class Pokemon{
 		}else{
 			return $this->naam.' zijn nieuwe HP is'.$this->hp; // returnt alleen als je pokemon niet verslagen is.
 		}
+		
 	}
 
 	function Aanvallen($moveNaam,$ontvanger)
@@ -45,5 +48,13 @@ class Pokemon{
 		return $ontvanger->Ontvangen($type, $aanvalSchade);
 
 	}
+
+	function setBijnaam($pokemonNaam, $bijnaam){
+    	$pokemon[$pokemonNaam]->setBijnaam();
+	}	
+
+    function Bijnaam($bijnaam){
+        $this->Bijnaam = $bijnaam;
+    }
 
 }

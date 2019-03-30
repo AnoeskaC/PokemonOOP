@@ -1,4 +1,5 @@
 <?php 
+
 class Pikachu extends Pokemon{
 
 	// pikachu's gegevens en meer.
